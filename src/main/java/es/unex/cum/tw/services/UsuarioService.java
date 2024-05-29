@@ -1,5 +1,10 @@
 package es.unex.cum.tw.services;
 
-public interface UsuarioService {
+import es.unex.cum.tw.models.Usuario;
 
+import java.sql.SQLException;
+import java.util.Optional;
+
+public interface UsuarioService {
+    Optional<Usuario> login(String username, String password) throws SQLException;
 }
